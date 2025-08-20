@@ -46,3 +46,11 @@ def delete_task(task_id: int):
     tasks = [t for t in tasks if t.id != task_id]
     return {"message": "Task deleted"}
 
+@app.get('/')
+
+def root():
+    return {
+        "activeStatus": True,
+        "error": False
+    }
+
